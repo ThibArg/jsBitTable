@@ -106,18 +106,6 @@ for each number, and using bitwise operators (&, |, ^ and ~).
 At the end, both classes implement the exact same routines and a generic one,
 BitTable handle both (developer selects the type he wants).
 
-BitTableStr are faster in reading (isOn(), countOnValues(), ...)  bcause the use
-native APIs such as charAt() and indexOf(). As JavaScript strings are not mutable
-(can't be modified: We must create a copy of the string), writting a 'bit' is
-slower in BitTableStr than in BitTableArr.
-
-*But* again, we are talking of differences when looping hundred of thousand times
-(and up to 10 millions in one test case). Which means that a basic use (calls to
-set(), setRange(), isOn(), ... made not that often) will not lead to perfomance
-issue for the end user: Use the implementaiton you prefer. If you know you'll use
-millions of bits, a BitTableArr probably a better choice.
-
-
 Here is the documentation for the routines.
 
 ---------------------------------------------------
