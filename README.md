@@ -20,7 +20,7 @@ Obviously, `BitTableStr` uses much more memory than `BitTableArr`: for n element
 
 Note that I'm taking my dreams for reality ;->. The notion of 32-bit integers does not exist in JS which only knows numbers, 8 bytes. So, the memory used is 8 bytes every 32 values. Still much lower than strings (64 bytes each 32 values)
 
-The fact is: I first developed the string kind, for handling only max 1,000 rows. But my testing with millions of rows shows that it was a bit slow. Not that slow, I admit (max some milliseconds for some routines such as countOnValues()), but too slow for me. So, I developped `BitTableArr`, which handles an array of number, 32 values for each number, and using bitwise operators (`&`, `|`, `^` and `~).
+The fact is: I first developed the string kind, for handling only max 1,000 rows. But my testing with millions of rows shows that it was a bit slow. Not that slow, I admit (max some milliseconds for some routines such as countOnValues()), but too slow for me. So, I developped `BitTableArr`, which handles an array of number, 32 values for each number, and using bitwise operators (`&`, `|`, `^` and `~`).
 
 In the end, both classes implement the exact same routines and a generic one, `BitTable handle both (developer selects the type he/she wants).
 
