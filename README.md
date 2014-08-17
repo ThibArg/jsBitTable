@@ -8,7 +8,7 @@ Classes: `BitTableArr`, `BitTableStr` and `BitTable`
 
 
 ### Principles
-A BitTable is a table of bits. Each bit ois set to 0 or 1. Using a bit table can be very useful in several situations. For example (and jsBitTable was developed with this purpose in mind), to keep track of the selected lines in a grid, when this grid can hold hundred, thousands, millions of rows. For each selected row, the BitTable just set the corresponding bit to 1.
+A BitTable is a table of bits. Each bit is set to 0 or 1. Using a bit table can be very useful in several situations. For example (and jsBitTable was developed with this purpose in mind), to keep track of the selected lines in a grid, when this grid can hold hundred, thousands, millions of rows. For each selected row, the BitTable just set the corresponding bit to 1.
 
 There are 2 different implementations:
 * `BitTableArr` uses an array of 32-bit integer and the bit-operators of JavaScript
