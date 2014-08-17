@@ -26,7 +26,11 @@ In the end, both classes implement the exact same routines and a generic one, `B
 
 `BitTableStr` is faster in reading (`isOn()`, `countOnValues()`, ...)  because it uses native APIs such as `charAt()` and `indexOf()`. As JavaScript strings are not mutable (can't be modified: We must create a copy of the string), writting a "bit" is slower in `BitTableStr` than in `BitTableArr`.
 
-*But*, again, we are talking of differences when looping hundred of thousand times (and up to 10 millions in one test case). Which means that a basic use (calls to `set()`, `setRange()`, `isOn()`, ... made not that often) will not lead to perfomance issue for the end user: Use the implementation you prefer. If you know you'll use millions of bits, a `BitTableArr probably a better choice.
+*But*, again, we are talking of differences when looping hundred of thousand times (and up to 10 millions in one test case). Which means that a basic use (calls to `set()`, `setRange()`, `isOn()`, ... made not that often) will not lead to perfomance issue for the end user: Use the implementation you prefer. If you know you'll use millions of bits, a `BitTableArr` probably is a better choice. Also, if you are running server-side, you may want to check the memory usage when using the string implementation. But you also want to be fast on the server, so if you are mainly *reading* the bittable, the `BitTableStr` mayb be better.
+
+Well.
+
+Just pick-up the best for you :-)
 
 ### API
 * **Introduction**
